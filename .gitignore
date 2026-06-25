@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Conclave artifacts
+*.trace.json
+trace.json
+conclave-dashboard.html
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local verification helpers (not part of the package)
+verify_run.py
+run_verify.bat
+verify_output.txt
+run_console.txt

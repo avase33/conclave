@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conclave-agents"
+version = "0.1.0"
+description = "A multi-agent orchestration framework: agents that plan, delegate, use tools, critique, and collaborate. Offline-first, zero runtime dependencies."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Akhil" }]
+keywords = ["ai", "agents", "multi-agent", "llm", "orchestration", "tools", "react", "framework"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Intended Audience :: Developers",
+  "Environment :: Console",
+]
+dependencies = []  # standard library only
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+conclave = "conclave.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/akhil/conclave"
+Issues = "https://github.com/akhil/conclave/issues"
+
+[tool.setuptools.packages.find]
+include = ["conclave*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
